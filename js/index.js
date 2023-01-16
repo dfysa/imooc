@@ -1,6 +1,8 @@
 //定时器实现关键词切换
 
 {
+
+    
     //1.获取搜索框的输入表单对象
 let input =document.querySelector(".search input");
 
@@ -22,12 +24,15 @@ setInterval(() => {
 
 // 轮播
 {
-    // 定义轮播图数组
-    const swiperImgList =[
+
+        // 定义轮播图数组
+
+
+    const swiperImgList = [
         {
-            path:'../images/swiper/swiper-1.jpg',
-            url: 'https://www.imooc.com/',
-            bg: '../images/swiper/bj-1.jpg'
+         path: './images/swiper/swiper-1.jpg',
+         url: 'https://coding.imooc.com/', 
+         bg: './images/swiper/bj-1.jpg'
         },
         {
             path:'../images/swiper/swiper-2.jpg',
@@ -44,7 +49,25 @@ setInterval(() => {
             url: 'https://www.imooc.com/',
             bg: '../images/swiper/bj-4.jpg'
         }
-    ];
+    ]
+       let imgs =[] ;
+       for (let index = 0; index < swiperImgList.length; index++) {
+        imgs[index] = new Image();
+       imgs[index].src = swiperImgList[index].path;
+    }
+
+    //封装一个切换图片的函数
+    function changeImg(index) {
+      const obj = swiperImgList[index];
+      swiperA.style.backgroundImage =`url(${imgs[index].src})`;
+      swiperA.href = obj.url;
+      //设置渐变背景
+      banner.style.backgroundImage = `url(${obj.bg})`;
+      //这条语句到圆点切换的时候再加，是让圆点切换和主图切换同步
+      currentCircle(index);
+}
+
+
 
 // 找到swiper下的a标签
 const swiperA=document.querySelector('.swiper a');
@@ -185,7 +208,7 @@ ul.onmouseenter = function() {
 //倒计时
 {
   // 领取时间结束点的时间轴
-  let endDate=new Date('2023-1-14 11:20:30');
+  let endDate=new Date('2023-1-15 10:20:30');
   endDate=parseInt(endDate.getTime()/1000);
   console.log(endDate);
 
@@ -214,9 +237,9 @@ ul.onmouseenter = function() {
         console.log(hours,mins,secs);
 
         //把结果显示到页面
-        hourDom .innerText=hours;
-        minDom .innerText=mins;
-        secDom .innerText=secs;
+        hourDom.innerText=hours;
+        minDom.innerText=mins;
+        secDom.innerText=secs;
 
     }else{
         //清空计时器
@@ -263,3 +286,53 @@ ul.onmouseenter = function() {
     }
 }
 
+
+
+//课程切换
+{
+    // 获取所有的a标签(tab栏)
+    const tabs = document.querySelectorAll('.new-course-box a');
+    // 获取到所有的课程表
+    const uls = document.querySelectorAll('.new-course-list ul');
+
+    for(let i = 0;i<tabs.length;i++){
+    //   循环为所有的a绑定点击时间
+    tabs[i].onclick =function(){
+        for(let j = 0;j<tabs.length;j++){
+            tabs[j].className =' ';
+           uls[j].className =' ';
+        } 
+        //给当前选中的a和ul添加样式
+        tabs[i].className ='active';
+        uls[i].className ='current';
+    }
+    }
+}
+
+{
+    // 获取所有的a标签(tab栏)
+    const tabs = document.querySelectorAll('.must-header a');
+    // 获取到所有的课程表
+    const uls = document.querySelectorAll('.must-list ul');
+
+    let uu = 0;
+    for(let i = 0;i<tabs.length;i++){
+    //   循环为所有的a绑定点击时间
+    tabs[i].onclick =function(){
+        for(let j = 0;j<tabs.length;j++){
+            tabs[j].className =' ';
+           uls[j].className =' ';
+        } 
+        //给当前选中的a和ul添加样式
+        tabs[i].className ='active';
+        uls[i].className ='must-current show';
+        uu = i;
+        for(let o = 0; o<tabs.length;o++){
+            if(o == uu){continue;}
+            else{uls[o].className ='must-current';}       
+        }
+    }
+    }
+    
+
+}

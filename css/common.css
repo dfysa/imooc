@@ -38,3 +38,16 @@
 .bg-white {
     background-color: #fff;
 }
+
+.footer {
+    height: 20px;
+}
+
+/* 文字截取2行 */
+.elipsis2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
