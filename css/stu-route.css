@@ -1,10 +1,10 @@
-#entermust {
+#sr {
     margin: 20px 0;
     padding-bottom: 48px;
 
 }
 
-.must-body {
+.sr-body {
     width: 1152;
     height: 634px;
 
@@ -12,20 +12,20 @@
     /* background-color: blue; */
 }
 
-.must-header {
+.sr-header {
     width: 972px;
     height: 36px;
     padding: 30px 0;
-    background-color: #fff;
+background-color: #F5F7FA;
 }
 
-.must-header>img {
+.sr-header>img {
     height: 36px;
     width: 180px;
     position: relative;
 }
 
-.must-header a {
+.sr-header a {
     font-size: 14px;
     color: black;
     font-weight: lighter;
@@ -35,70 +35,83 @@
     transition: .3s;
 }
 
-.must-list {
+.sr-list {
     width: 1182px;
     height: 568px;
 
 }
 
 /* 更改! */
-.must-current>li {
-    width: 270px;
-    height: 272px;
+.sr-current>li {
+    background-color: #fff;
+    width: 368px;
+    height: 178px;
     border-radius: 8px;
     box-shadow: 0 6px 10px 0 rgb(95 101 105 / 15%);
     margin-right: 24px;
     margin-bottom: 24px;
 }
 
-.must-list img {
-    width: 270px;
-    height: 152px;
+.sr-current>li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.sr-list img {
+    height: 90px;
+    width: 368px;
     margin-bottom: 8px;
     border-radius: 8px;
 
 
 }
 
-.inner-title {
-    width: 254px;
+.sr-title  {
+    color: black;
+
+    width: 358px;
     height: 40px;
     padding: 8px;
     margin-bottom: 8;
-    color: #545c63;
+
     line-height: 20px;
     font-size: 14px;
 }
 
-.inner-difficulty {
-    width: 254px;
-    height: 18px;
+.sr-left-difficulty {
+
+    display: inline;
+    width: 294px;
+    height: 16px;
     margin-bottom: 8px;
     padding: 0 8px;
-    color: #9199a1;
+
     font-size: 12px;
 }
 
-.inner-price {
-    color: #f01414;
-    font-size: 14px;
-    width: 52px;
-    height: 20px;
-    padding-left: 8px;
+.sr-right-difficulty {
+    display: inline;
+    width: 294px;
+    height: 16px;
+    margin-bottom: 8px;
+    margin-left: 200px;
+    font-size: 12px;
 }
 
-.must-header .active {
+
+.sr-header .active {
     border-bottom: 2px red solid;
     font-weight: 700;
     padding-bottom: 5px;
 }
 
-.must-list .show {
+.sr-list .show {
     display: block;
 }
 
 /* 更改! */
-.must-current {
+.sr-current {
     display: none;
     transition: .3s;
 }
