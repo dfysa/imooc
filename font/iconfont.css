@@ -35,12 +35,12 @@
 }
 
 .icon-shizhong:before {
-    font-size: 16px;
+
   content: "\e74f";
 }
 
 .icon-sanjiaoyou:before {
-    font-size: 16px;
+  font-size: 0.11px;
   content: "\e645";
 }
 

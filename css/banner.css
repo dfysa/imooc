@@ -75,7 +75,7 @@ padding: 0 10px;
 
  .course-list .iconfont{
 float: right;
-font-size: 10px;
+font-size: 0.11px;
 color: rgba(225, 225, 225, .5);
  }
 /* 课程分类列表结束 */
@@ -182,7 +182,7 @@ color: rgba(225, 225, 225, .5);
     font-size: 12px;
 }
 
-.sys-class .line{
+.sys-class .line1{
     display: inline-block;
     width: 2px;
     height: 40px;
