@@ -208,7 +208,7 @@ ul.onmouseenter = function() {
 //倒计时
 {
   // 领取时间结束点的时间轴
-  let endDate=new Date('2023-1-15 10:20:30');
+  let endDate=new Date('2023-1-22 10:20:30');
   endDate=parseInt(endDate.getTime()/1000);
   console.log(endDate);
 

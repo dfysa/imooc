@@ -1,0 +1,87 @@
+.footer{
+    padding: 36px;
+}
+.official {
+    width: 1200px;
+
+    padding: 20px 0;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+
+.official .word {
+    font-size: 12px;
+}
+.icon-weixin-copy:hover{
+    display: block;
+    font-size: 300px;
+}
+
+.official .liner>a {
+    width: 56px;
+    height: 28px;
+    margin-right: 24px;
+    font-size: 14px;
+    line-height: 28px;
+    color: #545c63;
+}
+
+.obby {
+    padding-top: 20px;
+    font-size: 12px;
+    margin-bottom: 36px;
+}
+
+.outershow div {
+    width: 60px;
+    height: 59px;
+    text-align: center;
+    font-size: 6px;
+}
+
+.friendly {
+    width: 1152px;
+    height: 144px;
+    margin: 24px auto;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+.footer2 span {
+    color: #545c63;
+    float: left;
+}
+
+.friendly a{
+    float: left;
+}
+.linkbox{
+    
+    float: left;
+    width: 68.6px;
+    height: 84px;
+}
+
+.liner2{
+    color: #545c63;
+
+    width: 1070px;
+
+}
+.official .liner2>a{
+      width: 56px;
+    height: 28px;
+    margin-left: 24px;
+    font-size: 14px;
+    line-height: 28px;
+    color: #545c63;
+
+}
+
+.white{
+    background-color: #fff;
+
+
+}
