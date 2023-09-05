@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/course.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/base.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- 新上好课开始 -->
+    <div id="new-course">
+        <div class=" new-course-box w">
+            <h3 class="title">
+                <img src="./images/cate/title-bg3.png" alt="新上好课">
+                <a href="javascript:" class="active">推荐</a>
+                <a href="javascript:">前端课程</a>
+
+            </h3>
+            <div class="new-course-list">
+                <!-- 推荐 -->
+                <ul class="current">
+                    1
+                </ul>
+
+
+
+                <!-- 前端课程 -->
+
+                <ul>
+                    2
+                    <!-- <li>
+                        <img src="./images/course/2-1.png" alt="">
+                        <div class="title ellipsis2">WebGL+Three.js 入门与实战，系统学习Web3D技术
+                        </div>
+                        <div class="difficulty">入门·224人报名</div>
+                        <div class="bottom">
+                            <span class="price ">￥348</span>
+
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/course/2-2.jpg" alt="">
+                        <div class="title ellipsis2">前端面试全家桶，从求职准备到面试演练
+                        </div>
+                        <div class="difficulty">中级·89人报名</div>
+                        <div class="bottom">
+                            <span class="price ">￥1299</span>
+
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/course/2-3.png" alt="">
+                        <div class="title ellipsis2">NestJS 入门到实战前端必学服务端新趋势
+                        </div>
+                        <div class="difficulty">中级·212人报名</div>
+                        <div class="bottom">
+                            <span class="price ">￥348</span>
+
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/course/2-4.png" alt="">
+                        <div class="title ellipsis2">Vue3 + React18+TS4入门到实战系统学习3大热门技术
+                        </div>
+                        <div class="difficulty">初级·128人报名</div>
+                        <div class="bottom">
+                            <span class="price ">￥799</span>
+
+                        </div>
+                    </li> -->
+                </ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    //课程切换
+    {
+        // 获取所有的a标签(tab栏)
+        const tabs = document.querySelectorAll('.new-course-box a');
+        // 获取到所有的课程表
+        const uls = document.querySelectorAll('.new-course-list ul');
+
+        for (let i = 0; i < tabs.length; i++) {
+            //   循环为所有的a绑定点击时间
+            tabs[i].onclick = function () {
+                for (let j = 0; j < tabs.length; j++) {
+                    tabs[j].className = ' ';
+                    uls[j].className = ' ';
+                }
+                //给当前选中的a和ul添加样式
+                tabs[i].className = 'active';
+                uls[i].className = 'current';
+            }
+        }
+    }
+</script>
+
+</html>
